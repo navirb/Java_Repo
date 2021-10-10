@@ -1,4 +1,4 @@
-package com.navir;
+package com.navir.displaypatterns;
 
 /**
  *  1 1 1 1 1 

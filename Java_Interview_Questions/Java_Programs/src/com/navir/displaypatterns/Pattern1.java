@@ -1,4 +1,4 @@
-package com.navir;
+package com.navir.displaypatterns;
 /**
  * 
  * @author Nagaraju
