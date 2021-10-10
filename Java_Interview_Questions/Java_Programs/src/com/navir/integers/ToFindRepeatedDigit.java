@@ -1,4 +1,4 @@
-package integers;
+package com.navir.integers;
 
 import java.util.HashMap;
 import java.util.Set;

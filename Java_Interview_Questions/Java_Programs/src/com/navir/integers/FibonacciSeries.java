@@ -1,4 +1,4 @@
-package integers;
+package com.navir.integers;
 
 public class FibonacciSeries {
 	public static void main(String[] args) {

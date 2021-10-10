@@ -1,4 +1,4 @@
-package integers;
+package com.navir.integers;
 
 public class ReverseNum {
 	public static void main(String[] args) {

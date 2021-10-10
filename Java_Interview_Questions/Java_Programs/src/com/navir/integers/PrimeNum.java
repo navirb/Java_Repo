@@ -1,4 +1,4 @@
-package integers;
+package com.navir.integers;
 
 public class PrimeNum {
 //Prime number that has exactly 2 factors: itself and 1
