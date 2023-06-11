@@ -1,0 +1,26 @@
+To validate the color of a textbox in Selenium, you can use the `getCssValue()` method to retrieve the CSS value of the textbox's color property and then compare it with the expected color value. Here's an example:
+
+```java
+// Locate the textbox element
+WebElement textbox = driver.findElement(By.id("textboxId"));
+
+// Get the value of the 'color' CSS property of the textbox
+String colorValue = textbox.getCssValue("color");
+
+// Compare the color value with the expected color
+if (colorValue.equals("rgba(255, 0, 0, 1)")) {
+    System.out.println("Textbox color is red.");
+} else {
+    System.out.println("Textbox color is not red.");
+}
+```
+
+In the above example, replace `"textboxId"` with the actual ID or any other appropriate locator strategy to locate the textbox element.
+
+The `getCssValue()` method retrieves the computed value of the specified CSS property of the element. In this case, we are retrieving the value of the `color` property.
+
+You can adjust the comparison logic based on your requirements. The example compares the color value with `"rgba(255, 0, 0, 1)"`, which represents red color in RGBA format. Modify the expected color value to match the color you want to validate.
+
+If the color value matches the expected color, you can perform further actions or assertions as needed. Otherwise, you can handle the validation failure or report an error.
+
+Note that the `getCssValue()` method returns the computed CSS value as a string, so make sure to compare the color value accordingly based on your color representation (RGB, RGBA, hexadecimal, etc.).

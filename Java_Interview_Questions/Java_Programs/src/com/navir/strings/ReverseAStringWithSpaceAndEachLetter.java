@@ -1,6 +1,6 @@
 package com.navir.strings;
 
-public class ReverseAString {
+public class ReverseAStringWithSpaceAndEachLetter {
 	public static void main(String[] args) {
 		String s = "I Love Java";
 		String str = " ";

@@ -1,0 +1,18 @@
+Page Object model
+Page Object Model (POM) is a design pattern widely used in test automation frameworks to enhance the maintainability, reusability, and readability of test scripts. It promotes the concept of separating the test logic from the page structure and interactions with the application's user interface.
+
+In the POM pattern, each web page or UI component of an application is represented by a separate class called a "Page Object." These Page Objects encapsulate the elements and actions specific to that page/component. The main idea behind POM is to have a single, centralized location for each page's elements and related methods, making it easier to manage and update the automation code.
+
+Key principles and benefits of using the Page Object Model:
+
+1. Abstraction: Page Objects abstract the underlying HTML structure of a web page. They provide higher-level methods and actions that represent the functionality of the page, hiding the implementation details and making the tests more readable.
+
+2. Reusability: Page Objects promote code reuse. By encapsulating the elements and actions of a page in a separate class, multiple tests can interact with the same page without duplicating code. If a page changes, updates only need to be made in the corresponding Page Object class, without affecting other tests.
+
+3. Maintainability: With POM, when a web page's UI changes, updates are made in a single place - the corresponding Page Object class. This approach reduces maintenance efforts and minimizes the impact of changes on the overall test suite.
+
+4. Readability: Test scripts using Page Objects are more readable and expressive. Test steps become intuitive and closely resemble the actual user interactions, improving the clarity and understanding of the test cases.
+
+5. Separation of Concerns: POM helps separate the test logic (test cases) from the UI-related code. Test scripts can focus on the business logic and flow, while Page Objects handle the UI interactions and element identification.
+
+Overall, the Page Object Model is a widely adopted design pattern in test automation frameworks, particularly for web-based applications. It promotes a structured and modular approach to writing test automation code, making it easier to maintain, update, and scale the automation suite.

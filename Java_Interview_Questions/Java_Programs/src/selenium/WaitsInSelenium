@@ -1,0 +1,27 @@
+what is the differenct between impicit wait and explicit wait
+Implicit Wait and Explicit Wait are two different mechanisms in Selenium WebDriver used to handle synchronization issues while automating web applications.
+
+1. Implicit Wait:
+   - Implicit Wait is a global setting that instructs the WebDriver to wait for a certain amount of time before throwing a NoSuchElementException if an element is not immediately found.
+   - It is applied to all elements and actions performed by the WebDriver instance throughout the entire test script.
+   - The implicit wait is set once at the beginning of the test and remains in effect until changed or reset.
+   - If an element is found before the specified wait time expires, the WebDriver proceeds with the next step without waiting for the full duration.
+   - It is useful to set a reasonable implicit wait to handle network latency, page loading delays, or delays caused by JavaScript or AJAX calls.
+   - Example:
+     ```java
+     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+     ```
+
+2. Explicit Wait:
+   - Explicit Wait is a more specific and granular wait mechanism where you can define conditions to wait for a certain event to occur before proceeding to the next step in the test.
+   - It allows you to wait for a specific condition or state to be met before performing an action on an element.
+   - Explicit Wait provides flexibility by defining custom wait conditions using ExpectedConditions class and specific wait strategies like wait for element visibility, clickability, text presence, etc.
+   - You can set explicit waits for specific elements or actions, and the WebDriver will wait until the specified condition is met or the timeout limit is reached.
+   - Explicit Wait is more powerful and precise compared to Implicit Wait as it allows you to control the waiting time and define custom conditions.
+   - Example:
+     ```java
+     WebDriverWait wait = new WebDriverWait(driver, 10);
+     WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("elementId")));
+     ```
+
+In summary, the main difference between Implicit Wait and Explicit Wait lies in their scope and control. Implicit Wait is a global setting applied to all elements and actions, while Explicit Wait is applied to specific elements or actions with custom conditions. Implicit Wait is set once and remains in effect throughout the test, whereas Explicit Wait is set dynamically for specific scenarios. Both waits serve the purpose of handling synchronization issues, but Explicit Wait provides more control and flexibility in waiting for specific conditions to be met before proceeding with the test.

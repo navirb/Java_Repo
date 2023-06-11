@@ -17,7 +17,7 @@ public class CalculateSumOfNumbersInString {
 	}
 	public static void main(String[] args) {
 		String str = "12abc20yz68";
-		System.out.println(str);
+		System.out.println(findSum(str));
 	}
 
 }

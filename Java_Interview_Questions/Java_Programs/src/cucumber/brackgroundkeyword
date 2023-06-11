@@ -1,0 +1,46 @@
+background keyword
+In Cucumber, the "Background" keyword is used to define a set of 
+common steps that are executed before each scenario in a feature file. 
+The Background keyword helps to eliminate duplication of 
+steps and makes the feature file more concise and readable.
+
+The Background section typically contains steps that are common 
+to all scenarios in a feature file, setting up the initial state or 
+context for the scenarios. These steps are executed once before each 
+scenario in the feature file, providing a consistent starting point for
+the scenarios.
+
+Here's an example of how the Background keyword is used in a feature file:
+
+```gherkin
+Feature: Shopping Cart
+
+  Background:
+    Given the user is on the shopping website
+    And the user has logged in
+
+  Scenario: Add item to the cart
+    When the user searches for "iPhone"
+    And selects the first search result
+    And adds the item to the cart
+    Then the item should be added successfully
+
+  Scenario: Remove item from the cart
+    When the user goes to the cart page
+    And removes the item from the cart
+    Then the item should be removed successfully
+```
+
+In this example, the Background section 
+defines the common steps that are executed 
+before each scenario. The steps "Given the user is on the shopping website"
+ and "And the user has logged in" are executed 
+ before the "Add item to the cart" and "Remove item from the cart" scenarios.
+  These steps help set up the initial state for the scenarios and 
+  ensure that the user is on the shopping website and logged 
+ in before proceeding with the scenario-specific steps.
+
+By using the Background keyword, you can avoid repeating the same 
+set of steps in each scenario and make your feature files more 
+concise and focused on the specific behavior being tested 
+in each scenario.

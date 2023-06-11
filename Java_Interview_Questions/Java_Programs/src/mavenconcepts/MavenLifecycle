@@ -1,0 +1,26 @@
+Maven Life Cycle
+Maven is a popular build automation and project management tool used in Java-based projects. It follows a defined life cycle that consists of several phases, each responsible for a specific set of tasks. The Maven life cycle consists of three main parts: Clean, Default, and Site.
+
+1. Clean Life Cycle:
+   - clean: Deletes any files generated during the build process.
+   
+2. Default Life Cycle:
+   - validate: Validates the project structure, dependencies, and other prerequisites.
+   - compile: Compiles the project's source code.
+   - test: Runs unit tests for the project.
+   - package: Packages the compiled code into a distributable format, such as a JAR or WAR file.
+   - verify: Performs additional checks on the package to ensure its integrity.
+   - install: Installs the package into the local repository for use by other projects.
+   - deploy: Copies the package to a remote repository for sharing with other developers or systems.
+
+3. Site Life Cycle:
+   - site: Generates project documentation, reports, and other project-related information.
+   - site-deploy: Deploys the generated documentation and reports to a remote server for sharing.
+
+These life cycle phases are further divided into goals, which are specific tasks within each phase. For example, within the compile phase, there are goals like compile, testCompile, and so on. Goals can be executed individually or as part of a life cycle phase.
+
+To execute a specific life cycle phase or goal, you can use the `mvn` command followed by the desired phase or goal. For example, to compile a Maven project, you can run `mvn compile`.
+
+It's important to note that the Default life cycle is the most commonly used and covers the essential build steps. However, you can customize the life cycle and add additional phases and goals as per your project requirements using Maven plugins.
+
+Understanding the Maven life cycle and its phases helps in automating various build tasks, managing dependencies, and generating project reports effectively.

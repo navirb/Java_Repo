@@ -1,0 +1,17 @@
+A bearer token is a type of access token used in API authentication. It is an encrypted string that represents the authorization granted to a user or application to access protected resources in an API.
+
+Bearer tokens are typically used in token-based authentication mechanisms such as OAuth 2.0. When a user or application successfully authenticates with an API server, the server generates a bearer token and provides it as a response to the authentication request. The bearer token is then included in subsequent API requests by including it in the HTTP Authorization header using the "Bearer" authentication scheme.
+
+Here's an example of how a bearer token is included in an API request:
+
+```
+GET /api/protected-resource HTTP/1.1
+Host: api.example.com
+Authorization: Bearer <bearer-token>
+```
+
+The `<bearer-token>` is the actual bearer token provided by the API server during authentication. The server validates the bearer token in each request and grants access to the protected resources if the token is valid and authorized.
+
+Bearer tokens offer simplicity and flexibility in API authentication as they can be easily passed along with each request. However, it's crucial to protect bearer tokens as they provide access to sensitive resources. HTTPS (SSL/TLS) should be used to encrypt communication and prevent unauthorized interception of bearer tokens.
+
+Bearer tokens typically have an expiration time, after which they become invalid. Refresh tokens may be used to obtain new bearer tokens without requiring the user to re-authenticate.

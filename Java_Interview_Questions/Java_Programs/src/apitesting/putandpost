@@ -1,0 +1,19 @@
+In the context of API development, the "PUT" and "POST" methods have specific meanings and purposes. Here are the key differences between them:
+
+1. Purpose:
+   - POST: The POST method is used to submit data to the server to create a new resource. It is typically used when you want to add a new entity or object to a collection or perform an operation that has a side effect on the server.
+   - PUT: The PUT method is used to update an existing resource or create a new resource if it doesn't exist. It sends the entire representation of the resource to be replaced or updated.
+
+2. Idempotence:
+   - POST: The POST method is not inherently idempotent, meaning that sending the same POST request multiple times may result in different outcomes. Each request typically creates a new resource or triggers a specific operation, such as generating a unique identifier for the created resource.
+   - PUT: The PUT method is intended to be idempotent, which means that sending the same PUT request multiple times should have the same effect as sending it once. Repeatedly sending the same PUT request should result in the same state for the resource on the server.
+
+3. Usage:
+   - POST: POST is commonly used for operations that create new resources, such as submitting a form, creating a new user account, or adding a new item to a shopping cart.
+   - PUT: PUT is commonly used for operations that update an existing resource, such as modifying the properties of an existing user account or updating a specific item in a collection.
+
+4. Partial Updates:
+   - POST: POST does not provide built-in support for partial updates. When using POST, you typically send all the data required to create a new resource.
+   - PUT: PUT can be used for both full updates and partial updates. When performing a partial update, you only need to send the fields that need to be modified, and the server should merge the provided data with the existing resource.
+
+In summary, POST is used for creating new resources and triggering operations with side effects, while PUT is used for updating existing resources or creating new resources with a specific identifier. POST is not idempotent, whereas PUT is intended to be idempotent.

@@ -1,0 +1,28 @@
+In TestNG, the order of execution for various annotations is as follows:
+
+1. `@BeforeSuite`: This annotation is executed before the test suite starts. It is only executed once for the entire suite.
+
+2. `@BeforeTest`: This annotation is executed before each `<test>` tag in the testng.xml file. If there are multiple `<test>` tags, this will be executed before each of them.
+
+3. `@BeforeClass`: This annotation is executed before the first test method in the current class is invoked.
+
+4. `@BeforeMethod`: This annotation is executed before each test method.
+
+5. `@Test`: This annotation represents an individual test method.
+
+6. `@AfterMethod`: This annotation is executed after each test method.
+
+7. `@AfterClass`: This annotation is executed after all the test methods in the current class have been executed.
+
+8. `@AfterTest`: This annotation is executed after all the test methods in each `<test>` tag have been executed.
+
+9. `@AfterSuite`: This annotation is executed after the entire suite has finished executing. It is only executed once for the entire suite.
+
+It's important to note that the execution order of these annotations may vary depending on the test framework and the configuration settings used in TestNG.
+
+
+
+
+------------------------------------------------------------------------------
+
+

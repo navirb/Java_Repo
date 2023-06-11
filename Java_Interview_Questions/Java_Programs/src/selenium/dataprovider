@@ -1,0 +1,50 @@
+In TestNG and Cucumber, you can use a data provider to supply test data to your test methods or scenarios. Here's how you can use a data provider in TestNG and Cucumber:
+
+TestNG:
+1. Define a data provider method that returns a two-dimensional object array with test data:
+   ```java
+   @DataProvider(name = "testdata")
+   public Object[][] testData() {
+       return new Object[][] {
+           {"Test Data 1"},
+           {"Test Data 2"},
+           // Add more test data as needed
+       };
+   }
+   ```
+
+2. Use the data provider in your test method by specifying the data provider name:
+   ```java
+   @Test(dataProvider = "testdata")
+   public void testMethod(String testData) {
+       // Test logic using the test data
+   }
+   ```
+
+3. During test execution, the test method will be executed multiple times, once for each set of test data provided by the data provider.
+
+Cucumber:
+1. Create a feature file with scenario outlines that include placeholders for test data:
+   ```gherkin
+   Scenario Outline: Test Scenario
+     Given I have test data "<testdata>"
+     When I perform some action
+     Then I expect a certain result
+     Examples:
+     | testdata    |
+     | Test Data 1 |
+     | Test Data 2 |
+     # Add more test data as needed
+   ```
+
+2. In your step definitions, use the placeholders to receive the test data:
+   ```java
+   @Given("I have test data {string}")
+   public void testDataStep(String testData) {
+       // Test logic using the test data
+   }
+   ```
+
+3. During test execution, Cucumber will run the scenario multiple times, once for each set of test data specified in the Examples section of the scenario outline.
+
+By utilizing data providers in TestNG or scenario outlines in Cucumber, you can easily supply different test data to your test methods or scenarios, enabling data-driven testing and executing tests with multiple input variations.

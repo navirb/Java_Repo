@@ -1,0 +1,9 @@
+Authentication and authorization are two distinct concepts related to API security:
+
+1. Authentication:
+   Authentication is the process of verifying the identity of a user or entity accessing an API. It ensures that the user or entity is who they claim to be. Authentication is typically achieved by providing credentials, such as a username and password, API keys, or tokens. The authentication process establishes the identity of the user, allowing the API to determine whether the user is allowed to access the requested resources.
+
+2. Authorization:
+   Authorization, on the other hand, is the process of granting or denying access to specific resources or operations within an API. Once the authentication process has verified the user's identity, the authorization process determines what actions or resources the authenticated user is allowed to access. Authorization is based on permissions and privileges associated with the authenticated user's role or specific attributes. It ensures that authenticated users only have access to the resources they are authorized to use.
+
+In summary, authentication verifies the identity of the user, while authorization determines the level of access and permissions granted to that user within the API. Both authentication and authorization are crucial components of API security, working together to ensure that only authenticated and authorized users can access protected resources and perform specific actions.

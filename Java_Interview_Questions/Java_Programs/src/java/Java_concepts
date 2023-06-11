@@ -1,0 +1,51 @@
+//Difference between Hasmap and Hashset
+HashMap and HashSet are both Java collections that store and organize data, but they have some key differences:
+
+1. Purpose:
+   - HashMap: HashMap is a key-value pair data structure that allows you to store and retrieve elements based on a unique key. It provides a mapping between keys and values, where each key is unique, and each key is associated with a value.
+   - HashSet: HashSet is a collection that stores unique elements. It does not allow duplicate values and provides a mechanism to quickly determine whether a given element exists in the set.
+
+2. Internal Implementation:
+   - HashMap: HashMap is implemented using a hash table data structure. It uses the hashCode of the key to determine the index at which the value is stored. This allows for efficient retrieval and storage of key-value pairs.
+   - HashSet: HashSet is implemented using a hash table as well, but it only stores the keys (not associated values). It uses the hashCode of the elements to determine their positions in the hash table, enabling quick membership tests.
+
+3. Elements Ordering:
+   - HashMap: HashMap does not guarantee any specific order of elements. The order in which elements are stored and retrieved may vary.
+   - HashSet: HashSet also does not guarantee any specific order of elements. The order in which elements are stored and retrieved may vary.
+
+4. Duplicate Elements:
+   - HashMap: HashMap allows duplicate values, but the keys must be unique. If a duplicate key is added, the existing value associated with that key will be overwritten.
+   - HashSet: HashSet does not allow duplicate elements. If a duplicate element is added, it will be ignored, and the set will not be modified.
+
+5. Usage:
+   - HashMap: HashMap is commonly used when you need to associate a unique key with a value, such as storing data that can be accessed using a specific identifier.
+   - HashSet: HashSet is useful when you need to maintain a collection of unique elements or when you want to perform quick membership tests (checking whether an element exists in the set).
+
+In summary, HashMap is used for key-value pair storage, allowing duplicate values with unique keys, while HashSet is used for storing unique elements without any associated values. HashMap is suitable when you need to access data using a specific key, while HashSet is useful for maintaining a collection of unique elements and performing membership tests.
+
+
+//Difference between Arrays and ArrayList
+Arrays and ArrayLists are both used to store and manipulate collections of elements in Java, but they have some key differences:
+
+1. Size:
+   - Array: Arrays have a fixed size that is defined at the time of array creation. The size of an array is determined by its length, which cannot be changed once the array is created.
+   - ArrayList: ArrayLists, on the other hand, have a dynamic size that can be changed dynamically. ArrayLists can grow or shrink in size as elements are added or removed.
+
+2. Type:
+   - Array: Arrays can store elements of any type, including primitive types and objects.
+   - ArrayList: ArrayLists can only store objects, not primitive types. If you want to store primitive types in an ArrayList, you need to use their corresponding wrapper classes (e.g., Integer, Double) instead.
+
+3. Flexibility:
+   - Array: Arrays offer less flexibility in terms of adding or removing elements. The size is fixed, and if you want to add or remove elements, you need to create a new array with the desired size and copy the elements from the old array to the new one.
+   - ArrayList: ArrayLists are more flexible and provide built-in methods to add, remove, or modify elements at any position. The size of an ArrayList can change dynamically, and you don't need to worry about resizing or copying elements manually.
+
+4. Length/Capacity:
+   - Array: Arrays have a length property that represents the number of elements in the array.
+   - ArrayList: ArrayLists have a size() method that returns the number of elements currently stored in the ArrayList. The underlying capacity of an ArrayList may be greater than its size to accommodate future additions.
+
+5. Methods and Functionality:
+   - Array: Arrays have a limited set of methods and functionality provided by the Java language. Some common operations like sorting or searching need to be implemented manually or using utility methods from the Arrays class.
+   - ArrayList: ArrayLists provide a rich set of methods and functionality through the ArrayList class. These include methods for adding, removing, retrieving, and manipulating elements, as well as sorting and searching operations.
+
+In summary, arrays have a fixed size and offer less flexibility, while ArrayLists have a dynamic size and provide built-in methods for adding, removing, and manipulating elements. Arrays can store both primitive types and objects, while ArrayLists can only store objects. ArrayLists offer more convenience and functionality but may have a slight performance overhead compared to arrays due to their dynamic resizing capability.
+

@@ -1,0 +1,51 @@
+To read data from an Excel file in Selenium, you can use a library like Apache POI. Apache POI provides classes and methods to interact with Excel files in Java. Here's an example of how you can read data from an Excel file using Apache POI in Selenium:
+
+1. Add Apache POI dependencies to your project. You can download the required JAR files from the Apache POI website or include them in your project using a build management tool like Maven or Gradle.
+
+2. Import the necessary classes from Apache POI:
+   ```java
+   import org.apache.poi.ss.usermodel.*;
+   import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+   ```
+
+3. Load the Excel file:
+   ```java
+   String filePath = "path/to/your/excel/file.xlsx";
+   FileInputStream fileInputStream = new FileInputStream(new File(filePath));
+   Workbook workbook = new XSSFWorkbook(fileInputStream);
+   ```
+
+4. Get the desired sheet from the workbook:
+   ```java
+   Sheet sheet = workbook.getSheet("Sheet1"); // Replace "Sheet1" with the actual sheet name
+   ```
+
+5. Iterate through the rows and columns to read the data:
+   ```java
+   for (Row row : sheet) {
+       for (Cell cell : row) {
+           // Read the cell value based on its data type
+           switch (cell.getCellType()) {
+               case STRING:
+                   String cellValue = cell.getStringCellValue();
+                   System.out.println(cellValue);
+                   break;
+               case NUMERIC:
+                   double numericValue = cell.getNumericCellValue();
+                   System.out.println(numericValue);
+                   break;
+               // Handle other data types as needed
+           }
+       }
+   }
+   ```
+
+6. Close the workbook and input stream after reading the data:
+   ```java
+   workbook.close();
+   fileInputStream.close();
+   ```
+
+Make sure to replace the "path/to/your/excel/file.xlsx" with the actual path to your Excel file, and "Sheet1" with the name of the sheet you want to read.
+
+By following the above steps, you can read the data from an Excel file in Selenium using Apache POI. You can then use the retrieved data for your test automation scenarios as needed.

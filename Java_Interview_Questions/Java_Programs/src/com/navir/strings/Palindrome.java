@@ -15,7 +15,7 @@ public class Palindrome {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(isPalindromeString("today"));
+		System.out.println(isPalindromeString("Madam"));
 	}
 
 }

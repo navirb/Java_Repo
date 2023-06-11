@@ -1,0 +1,48 @@
+what are hooks in cucumber
+
+In Cucumber, hooks are blocks of code that allow you to 
+perform certain actions before or after specific events
+ during the test execution cycle. Hooks provide a way to 
+ set up the test environment, perform setup and teardown activities, 
+ and define additional behavior for scenarios and steps. 
+ Hooks are written in Java or other supported programming 
+ languages and are executed automatically at certain points 
+ in the test execution lifecycle.
+
+Here are the different types of hooks available in Cucumber:
+
+1. Before: The Before hook is executed before each scenario. 
+It is commonly used to set up the test environment or 
+initialize necessary resources before executing the scenario.
+
+2. After: The After hook is executed after each scenario. 
+It is used to perform cleanup tasks, tear down resources, 
+or capture screenshots or logs after executing the scenario.
+
+3. BeforeStep: The BeforeStep hook is executed before 
+each step in the scenario. It is used to perform actions 
+before each individual step, such as logging or taking 
+specific actions based on the step being executed.
+
+4. AfterStep: The AfterStep hook is executed after each 
+step in the scenario. It is used to perform actions after 
+each individual step, such as capturing screenshots or logging.
+
+Hooks can be defined at different levels:
+
+- Global Hooks: Global hooks are defined once and apply to 
+all scenarios across feature files. They are typically defined 
+in a separate class or file.
+
+- Tagged Hooks: Hooks can be tagged with specific tags 
+and will only be executed when the corresponding scenarios or 
+features are tagged accordingly. This allows for more 
+fine-grained control over when hooks are executed.
+
+Hooks are a powerful feature in Cucumber as they enable you 
+to perform setup and teardown activities, customize behavior, 
+and integrate with external systems or tools. 
+They enhance the reusability and maintainability 
+of your test code by keeping common actions centralized 
+and executed automatically at the appropriate points 
+in the test execution cycle.

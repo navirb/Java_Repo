@@ -1,0 +1,22 @@
+SELECT salary
+FROM employees
+ORDER BY salary DESC
+LIMIT 1 OFFSET 9;
+
+
+//to get 10th highest salary
+SELECT salary
+FROM (
+    SELECT salary, ROW_NUMBER() OVER (ORDER BY salary DESC) AS row_num
+    FROM (
+        SELECT DISTINCT salary
+        FROM employees
+    ) AS subquery
+) AS ranked_salaries
+WHERE row_num = 10;
+
+//sql query to find the duplicate records
+SELECT column1, column2, ..., columnN, COUNT(*) as count
+FROM table_name
+GROUP BY column1, column2, ..., columnN
+HAVING COUNT(*) > 1;
