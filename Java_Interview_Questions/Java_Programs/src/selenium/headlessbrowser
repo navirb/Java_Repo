@@ -1,0 +1,36 @@
+To launch a headless browser in Selenium, you can use the `ChromeOptions` or `FirefoxOptions` class and set the `headless` option to `true`. Here's an example of launching a headless Chrome browser using Selenium WebDriver in Java:
+
+```java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class HeadlessBrowserExample {
+    public static void main(String[] args) {
+        // Set the path to the chromedriver executable
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+
+        // Create ChromeOptions object and set headless mode to true
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(true);
+
+        // Create an instance of ChromeDriver with the options
+        WebDriver driver = new ChromeDriver(options);
+
+        // Perform operations with the headless browser
+        driver.get("https://www.example.com");
+        System.out.println("Page title: " + driver.getTitle());
+
+        // Close the browser
+        driver.quit();
+    }
+}
+```
+
+In this example, we first set the path to the ChromeDriver executable using `System.setProperty()`. Then, we create an instance of `ChromeOptions` and set the `headless` option to `true`. This enables the headless mode for the Chrome browser. We pass these options to the `ChromeDriver` constructor, which creates a headless Chrome browser instance.
+
+You can similarly use `FirefoxOptions` for launching a headless Firefox browser. Just replace the `ChromeDriver` and `ChromeOptions` with `FirefoxDriver` and `FirefoxOptions` respectively.
+
+When the browser is running in headless mode, it operates without a visible browser window. It is useful for scenarios where you don't require a GUI or want to run your tests in a server environment without a display.
+
+Make sure to provide the correct path to the ChromeDriver or GeckoDriver executable based on the browser you are using.

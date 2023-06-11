@@ -1,0 +1,16 @@
+`git pull` and `git fetch` are two different Git commands used to update a local repository with changes from a remote repository. Here's the difference between them:
+
+1. `git pull`:
+   - The `git pull` command combines two operations: `git fetch` and `git merge`.
+   - It fetches the latest changes from the remote repository and automatically merges them into the current branch.
+   - It is a convenient way to fetch and merge changes in one command.
+   - If there are any conflicts during the merge, you will need to resolve them manually.
+
+2. `git fetch`:
+   - The `git fetch` command only downloads the latest changes from the remote repository to the local repository.
+   - It updates the remote tracking branches, such as `origin/master`, `origin/develop`, etc., with the latest commit history from the remote repository.
+   - It does not automatically merge the fetched changes into the current branch.
+   - After fetching, you can inspect the changes using commands like `git log` or `git diff` to see what has been updated in the remote repository.
+   - Once you have fetched the changes, you can decide how to integrate them into your local branch, such as merging or rebasing.
+
+In summary, `git pull` is a command that fetches and merges changes from a remote repository into the current branch, while `git fetch` only downloads the changes to update the remote tracking branches and allows you to inspect them before performing any integration operation manually.

@@ -1,0 +1,31 @@
+To find the second highest salary in a SQL database table, you can use the following query:
+
+```sql
+SELECT MAX(salary) AS second_highest_salary
+FROM employees
+WHERE salary < (
+    SELECT MAX(salary)
+    FROM employees
+);
+```
+
+In this query, we first find the maximum salary in the employees table using the inner subquery `(SELECT MAX(salary) FROM employees)`. Then, in the outer query, we select the maximum salary (`MAX(salary)`) that is less than the maximum salary found in the subquery. This will give us the second highest salary.
+
+Note: Replace `employees` with the actual name of your table.
+
+If there are multiple employees with the same salary as the highest salary, the above query will return the highest salary as the second highest salary. If you want to exclude the employees with the highest salary and get the next distinct salary, you can modify the query as follows:
+
+```sql
+SELECT MAX(salary) AS second_highest_salary
+FROM employees
+WHERE salary < (
+    SELECT MAX(salary)
+    FROM employees
+)
+AND salary NOT IN (
+    SELECT MAX(salary)
+    FROM employees
+);
+```
+
+This query excludes the highest salary from consideration when finding the second highest salary.

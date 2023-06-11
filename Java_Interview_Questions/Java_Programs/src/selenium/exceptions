@@ -1,0 +1,17 @@
+In Selenium, there are several exceptions that can occur during test execution. These exceptions provide information about specific issues or errors encountered while interacting with the web elements or performing actions on the web page. Here are some common exceptions in Selenium:
+
+1. `NoSuchElementException`: This exception is thrown when an element cannot be found on the web page. It usually occurs when the element locator provided to locate the element is incorrect or the element is not present in the DOM.
+
+2. `TimeoutException`: This exception is thrown when an operation or action takes longer than the specified time to complete. It occurs when explicit or implicit wait timeouts are exceeded.
+
+3. `ElementNotVisibleException`: This exception is thrown when an element is present in the DOM but is not visible on the web page. It can occur when trying to interact with hidden elements or elements that are not currently displayed.
+
+4. `ElementNotInteractableException`: This exception is thrown when an element is visible on the web page but is not in a state to be interacted with. It occurs when trying to perform actions like clicking, typing, or selecting on an element that is not enabled or clickable.
+
+5. `StaleElementReferenceException`: This exception is thrown when the reference to an element becomes "stale" or "invalid" due to a page refresh or navigation. It occurs when trying to interact with an element that is no longer attached to the DOM.
+
+6. `NoSuchWindowException`: This exception is thrown when attempting to switch to a window or frame that does not exist or has been closed. It occurs when working with multiple windows or frames.
+
+7. `WebDriverException`: This is a general exception class that represents any WebDriver-related exception. It can be thrown for various reasons, such as issues with the browser driver or unexpected errors during test execution.
+
+These are just a few examples of exceptions that can occur in Selenium. It's important to handle these exceptions appropriately in your code by using try-catch blocks or utilizing exception handling mechanisms to gracefully handle errors and failures during test execution.

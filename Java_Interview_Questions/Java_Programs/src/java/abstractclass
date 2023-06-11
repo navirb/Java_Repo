@@ -1,0 +1,10 @@
+An abstract class in Java is a class that cannot be instantiated, but can be subclassed. It's used to provide a common base for a group of related classes, and defines a set of methods that must be implemented by its subclasses.
+Here are some reasons why you might want to use an abstract class:
+To define a common interface for a group of related classes: If you have a group of classes that share some common behaviour, an abstract class can define that behaviour in a single place, making it easier to manage and maintain.
+To provide a partial implementation: An abstract class can define some methods with a default implementation, leaving the implementation of some methods to its subclasses. This can make it easier to create new subclasses by providing some of the necessary code.
+To enforce a contract: An abstract class can define a set of methods that must be implemented by its subclasses, ensuring that they all provide the same set of behaviour. This can make it easier to reason about the behaviour of the classes in your code.
+When to use an abstract class:
+When you want to define a common interface for a group of related classes: If you have a group of classes that share some common behaviour, you can define an abstract class that provides that behaviour and make all the related classes extend it.
+When you want to provide a partial implementation: If you have a group of classes that share some common behaviour but also have some differences, you can define an abstract class that provides the common behaviour and leave the implementation of the differences to the subclasses.
+When you want to enforce a contract: If you want to ensure that a group of classes provides a specific set of behaviour, you can define an abstract class that defines that behaviour and make all the related classes implement it.
+Overall, abstract classes are a useful tool for managing code complexity and enforcing good design practices in Java.

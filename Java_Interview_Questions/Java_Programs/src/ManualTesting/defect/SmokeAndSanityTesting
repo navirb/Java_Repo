@@ -1,0 +1,21 @@
+Smoke Testing and Sanity Testing are both types of software testing performed during the early stages of the testing process. However, they serve different purposes and have distinct characteristics. Here's a comparison between Smoke Testing and Sanity Testing:
+
+Smoke Testing:
+- Purpose: Smoke Testing is performed to check if the critical functionalities of an application are working as expected, ensuring that the software is stable enough for further testing.
+- Scope: It focuses on testing the major functionalities or core features of the application.
+- Depth: Smoke Testing is a shallow and wide approach, where a limited set of test cases is executed to cover the essential functionality.
+- Timing: It is usually executed after a build is received for testing, typically during the early stages of the development process.
+- Goal: The main goal of Smoke Testing is to identify showstopper defects that prevent further testing or deployment of the application.
+- Coverage: It ensures that the critical areas of the application are not broken, and the build is suitable for further rigorous testing.
+- Test Cases: Smoke Testing involves executing a basic set of high-level test cases to verify the fundamental functionality of the application.
+
+Sanity Testing:
+- Purpose: Sanity Testing is performed to quickly determine if the newly added or modified functionality is working as expected after a build is received.
+- Scope: It focuses on specific areas or components of the application that were changed or added during the latest development iteration.
+- Depth: Sanity Testing is a focused and narrow approach, where a selective set of test cases is executed to validate the specific changes made.
+- Timing: It is typically executed after a build with specific changes is received for testing, usually before the comprehensive regression testing phase.
+- Goal: The main goal of Sanity Testing is to ensure that the recent changes or fixes have not introduced any major issues or regressions.
+- Coverage: It provides confidence that the recent modifications or fixes have not adversely impacted the critical functionalities of the application.
+- Test Cases: Sanity Testing involves executing a subset of test cases related to the recent changes or areas affected by the modifications.
+
+In summary, Smoke Testing is performed to assess the overall stability of the software by checking critical functionalities, while Sanity Testing is conducted to verify the recent changes or additions in a targeted manner. Both tests aim to quickly identify any significant issues before proceeding with further testing activities.

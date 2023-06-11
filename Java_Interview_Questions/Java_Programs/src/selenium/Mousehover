@@ -1,0 +1,42 @@
+To perform a mouse hover action in Selenium, you can use the Actions class provided by the WebDriver API. The Actions class provides various methods to simulate different mouse interactions, including mouse hover. Here's an example of how to perform a mouse hover using Selenium WebDriver in Java:
+
+```java
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class MouseHoverExample {
+    public static void main(String[] args) {
+        // Set the path to the chromedriver executable
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+
+        // Create an instance of ChromeDriver
+        WebDriver driver = new ChromeDriver();
+
+        // Launch the website
+        driver.get("https://www.example.com");
+
+        // Find the element to hover over
+        WebElement elementToHover = driver.findElement(By.id("elementId"));
+
+        // Create an instance of Actions class
+        Actions actions = new Actions(driver);
+
+        // Perform the mouse hover action
+        actions.moveToElement(elementToHover).build().perform();
+
+        // Other actions can be performed after the mouse hover
+
+        // Close the browser
+        driver.quit();
+    }
+}
+```
+
+In this example, we first launch a website and locate the element on which we want to perform the mouse hover action. We then create an instance of the Actions class and use the `moveToElement()` method to specify the element to hover over. Finally, we call `build().perform()` to execute the actions.
+
+Note that you need to replace `"path/to/chromedriver"` with the actual path to the ChromeDriver executable on your system. Additionally, replace `"elementId"` with the appropriate locator (e.g., ID, CSS selector, XPath) for the element you want to hover over.
+
+By performing a mouse hover, you can trigger events like dropdown menus, tooltips, or submenus that are revealed when hovering over an element on a web page.

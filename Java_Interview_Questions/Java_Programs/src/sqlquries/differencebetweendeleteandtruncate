@@ -1,0 +1,23 @@
+The DELETE and TRUNCATE statements in SQL are used to remove data from database tables, but they differ in their functionality and behavior. Here are the key differences between DELETE and TRUNCATE:
+
+1. Operation:
+   - DELETE: The DELETE statement is used to remove specific rows from a table based on a condition or criteria specified in the WHERE clause. It allows for selective deletion of data.
+   - TRUNCATE: The TRUNCATE statement is used to remove all rows from a table, effectively deleting all data in the table. It performs a complete removal of data without any filtering or condition.
+
+2. Transactional behavior:
+   - DELETE: The DELETE statement is logged and executed as a transaction, meaning it can be rolled back using the transaction mechanism. The changes made by the DELETE statement can be undone if needed.
+   - TRUNCATE: The TRUNCATE statement is not logged as individual row deletions. It is treated as a single, non-transactional operation that cannot be rolled back. Once the TRUNCATE statement is executed, the data is permanently removed from the table.
+
+3. Performance:
+   - DELETE: The DELETE statement is relatively slower compared to TRUNCATE, especially when deleting a large number of rows. It involves logging each deletion operation and checking for triggers, constraints, and indexes associated with the table.
+   - TRUNCATE: The TRUNCATE statement is faster than DELETE as it does not generate individual delete operations for each row. It deallocates the data pages, effectively removing all rows from the table. It is a more efficient way to remove all data from a table.
+
+4. Resetting auto-increment values:
+   - DELETE: When using DELETE, the auto-increment values of the table are not affected. The next row inserted will continue from the last auto-increment value.
+   - TRUNCATE: TRUNCATE resets the auto-increment values of the table. The next row inserted after TRUNCATE will start from the initial auto-increment value.
+
+5. Usage restrictions:
+   - DELETE: The DELETE statement can be used with a WHERE clause to specify a condition for row deletion. It allows for more selective deletion of data based on specific criteria.
+   - TRUNCATE: The TRUNCATE statement does not support a WHERE clause. It removes all rows from the table without any filtering.
+
+In summary, DELETE is used to selectively remove specific rows from a table, while TRUNCATE is used to remove all rows from a table. DELETE is transactional, allows for selective deletion, and is slower compared to TRUNCATE. TRUNCATE is non-transactional, faster, resets auto-increment values, and removes all data from the table.

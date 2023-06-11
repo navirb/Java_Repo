@@ -1,0 +1,30 @@
+There are several testing techniques used in software testing to identify defects and ensure the quality of the software. Here are some commonly used testing techniques:
+
+1. Black Box Testing:
+   Black box testing focuses on testing the functionality of the software without knowledge of its internal structure. Testers validate the system by providing inputs and examining outputs based on the software's specifications or requirements.
+
+2. White Box Testing:
+   White box testing, also known as structural or glass box testing, involves testing the internal structure and implementation of the software. Testers have knowledge of the code and use techniques such as code coverage analysis to ensure that all code paths and branches are tested.
+
+3. Grey Box Testing:
+   Grey box testing is a combination of black box and white box testing. Testers have partial knowledge of the internal workings of the software, allowing them to design tests that cover specific areas of interest while still focusing on the overall functionality.
+
+4. Functional Testing:
+   Functional testing verifies that the software functions as intended, according to the specified requirements. It involves testing individual functions or features of the software to ensure they work correctly and produce the expected results.
+
+5. Performance Testing:
+   Performance testing evaluates the software's performance under specific conditions, such as load testing to measure its behavior under expected and peak loads, stress testing to determine its limits, and scalability testing to assess its ability to handle increasing user loads.
+
+6. Security Testing:
+   Security testing focuses on identifying vulnerabilities and weaknesses in the software's security mechanisms. It involves testing for potential security breaches, such as unauthorized access, data leaks, and potential threats to the system.
+
+7. Usability Testing:
+   Usability testing assesses the software's user-friendliness and ease of use. Testers evaluate aspects such as user interface, navigation, intuitiveness, and overall user experience to ensure that the software meets the needs and expectations of its intended users.
+
+8. Regression Testing:
+   Regression testing involves retesting previously tested functionality to ensure that changes or fixes made to the software do not introduce new defects or break existing functionality. It helps ensure that the software remains stable and functions as expected after modifications.
+
+9. Exploratory Testing:
+   Exploratory testing is an informal and iterative approach where testers explore the software dynamically, learning about its behavior and identifying defects in real-time. It involves simultaneous test design and execution, relying on the tester's experience, intuition, and knowledge of the application.
+
+These are just a few examples of testing techniques, and there are many more specialized techniques and approaches available. The choice of testing techniques depends on the nature of the software, project requirements, available resources, and testing objectives. Testers often combine multiple techniques to achieve comprehensive test coverage and improve the overall quality of the software.

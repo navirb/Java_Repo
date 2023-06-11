@@ -1,0 +1,54 @@
+To handle alerts in Selenium, you can follow these steps:
+
+1. Switch to the alert: Use the `switchTo().alert()` method to switch the focus to the alert dialog. This allows you to interact with the alert.
+
+2. Perform actions on the alert:
+   - Accept the alert: Use the `accept()` method to click the "OK" or "Accept" button on the alert.
+   - Dismiss the alert: Use the `dismiss()` method to click the "Cancel" or "Dismiss" button on the alert.
+   - Get the text from the alert: Use the `getText()` method to retrieve the text displayed in the alert.
+   - Enter text in the alert: Use the `sendKeys()` method to enter text into an alert prompt.
+
+Here's an example code snippet demonstrating how to handle alerts in Selenium:
+
+```java
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AlertHandlingExample {
+    public static void main(String[] args) {
+        // Set the path to the chromedriver executable
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+
+        // Create an instance of ChromeDriver
+        WebDriver driver = new ChromeDriver();
+
+        // Launch the website with an alert
+        driver.get("https://www.example.com");
+
+        // Find the button/link to trigger the alert
+        driver.findElement(By.id("alertButton")).click();
+
+        // Switch to the alert
+        Alert alert = driver.switchTo().alert();
+
+        // Get the text from the alert
+        String alertText = alert.getText();
+        System.out.println("Alert text: " + alertText);
+
+        // Accept the alert (click OK)
+        alert.accept();
+
+        // Dismiss the alert (click Cancel)
+        // alert.dismiss();
+
+        // Close the browser
+        driver.quit();
+    }
+}
+```
+
+In this example, we first launch a website that triggers an alert when a button or link is clicked. We use the `switchTo().alert()` method to switch the focus to the alert dialog. Then, we can perform actions on the alert, such as getting the text and accepting or dismissing it.
+
+Note that the specific methods used to handle alerts may vary slightly depending on the Selenium WebDriver binding you are using (e.g., Selenium WebDriver for Java, Python, or other languages).

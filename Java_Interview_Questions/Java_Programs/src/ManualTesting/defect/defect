@@ -1,0 +1,14 @@
+what is the formula for defect leakage
+Defect leakage is a metric used to measure the number or percentage of defects that escape the testing phase and are discovered by users or customers after the software is released. There is no specific formula for defect leakage, but it can be calculated using the following formula:
+
+Defect Leakage = (Number of Defects Found in Production / Total Number of Defects) * 100
+
+To calculate the defect leakage, you need to track the total number of defects found during the testing phase, as well as the number of defects reported by users or discovered in the production environment after the software release. Divide the number of defects found in production by the total number of defects, and then multiply the result by 100 to get the percentage.
+
+For example, if during testing you found a total of 100 defects, and after the release, users reported 20 additional defects, the calculation would be:
+
+Defect Leakage = (20 / 100) * 100 = 20%
+
+This means that 20% of the total defects escaped the testing phase and were discovered by users or customers in the production environment.
+
+Defect leakage is an important metric that helps evaluate the effectiveness of the testing process and identify areas for improvement in the software development lifecycle. It provides insights into the quality of the released software and helps in implementing measures to reduce defect leakage in future releases.

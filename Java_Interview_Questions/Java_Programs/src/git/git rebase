@@ -1,0 +1,36 @@
+Git rebase is a command used in Git version control to integrate changes from one branch onto another branch. It is a way to modify the commit history of a branch by moving, combining, or editing existing commits.
+
+When you perform a rebase, Git takes the commits from the current branch and replays them onto another branch. It effectively changes the base of the current branch to be the tip of the target branch.
+
+The syntax for git rebase is as follows:
+
+```
+git rebase <target-branch>
+```
+
+Here's a step-by-step explanation of how git rebase works:
+
+1. Switch to the branch you want to rebase onto another branch:
+   ```
+   git checkout <current-branch>
+   ```
+
+2. Run the rebase command, specifying the target branch you want to rebase onto:
+   ```
+   git rebase <target-branch>
+   ```
+
+   Git will identify the commits that are unique to the current branch but not in the target branch.
+
+3. Git will rewind the current branch back to the common ancestor of the current branch and the target branch.
+
+4. Git will replay the unique commits from the current branch on top of the target branch one by one. It recreates each commit with a new commit hash.
+
+5. If there are conflicts during the replaying of the commits, Git will pause the rebase process and prompt you to resolve the conflicts manually. You can use `git status` and `git diff` commands to identify and resolve the conflicts.
+
+6. After resolving the conflicts, use `git add` to stage the changes and `git rebase --continue` to continue the rebase process. Git will apply the remaining commits.
+
+7. Once the rebase is complete, the current branch will have the updated commit history, incorporating the changes from the target branch.
+
+Note that it is important to use caution when performing a rebase, especially on shared branches or when working with other collaborators. Rewriting commit history can cause conflicts and make it difficult for others to sync their work. It is generally recommended to use rebase for local branches or feature branches before merging them into the main branch.
+

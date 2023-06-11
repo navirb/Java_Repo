@@ -1,0 +1,20 @@
+There is no built-in "git revoke" command in Git. However, if you want to undo or revert a commit that has been pushed to a remote repository, you can use the "git revert" or "git reset" commands. Here's a brief explanation of each:
+
+1. Git Revert:
+   - The "git revert" command creates a new commit that undoes the changes made in a previous commit. It is a safe way to undo commits, as it maintains the commit history and does not rewrite the commit history.
+   - To revert a commit, use the following command:
+     ```
+     git revert <commit-id>
+     ```
+   - This will create a new commit that undoes the changes made in the specified commit.
+
+2. Git Reset:
+   - The "git reset" command is used to move the branch pointer to a different commit, effectively discarding commits. It can be used to undo one or more commits, but it rewrites the commit history.
+   - There are different modes of reset, such as "soft", "mixed", and "hard". The most commonly used mode is "soft" and "mixed".
+   - To undo the last commit and move the branch pointer to the previous commit, use the following command:
+     ```
+     git reset --soft HEAD^
+     ```
+   - This will keep the changes from the undone commit in the staging area, allowing you to make further changes before committing again.
+
+Please note that if you have already pushed the commit to a remote repository and others have based their work on that commit, it is generally not recommended to completely remove the commit from the history. In such cases, it is better to use the "git revert" command to create a new commit that undoes the changes.

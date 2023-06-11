@@ -1,0 +1,17 @@
+Burn-up and burn-down charts are graphical representations commonly used in project management, specifically in Agile methodologies, to track and visualize the progress of work over time. They provide a visual representation of the amount of work completed versus the planned work.
+
+1. Burn-up Chart:
+   - A burn-up chart shows the total scope of work (usually represented by story points or work items) on the vertical axis and time on the horizontal axis.
+   - The chart starts at zero on the vertical axis and tracks the cumulative completed work over time as the project progresses.
+   - It also includes a line representing the total planned work, often called the "scope line" or "baseline."
+   - As work is completed, the cumulative completed work line moves up, approaching or reaching the scope line.
+   - The burn-up chart helps track progress, identify if the project is on track to meet its goals, and visualize any scope changes or variations.
+
+2. Burn-down Chart:
+   - A burn-down chart also shows the total scope of work on the vertical axis and time on the horizontal axis.
+   - The chart starts at the total planned work on the vertical axis and tracks the remaining work over time.
+   - It includes a line representing the ideal progress, indicating how the remaining work should ideally decrease linearly to reach zero by the end of the project.
+   - As work is completed, the remaining work line moves down, approaching or reaching zero.
+   - The burn-down chart helps track progress, identify if the project is on track to complete within the desired time frame, and visualize any deviations or changes in the work remaining.
+
+Both burn-up and burn-down charts provide a visual representation of work progress, allowing teams to have a clear understanding of how much work has been completed and how much is remaining. They facilitate communication, transparency, and early identification of any issues or deviations from the planned trajectory. These charts are widely used in Agile project management to monitor and adapt project progress throughout the development lifecycle.
